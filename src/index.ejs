@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="<%= htmlWebpackPlugin.options.lang %>">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Language" content="<%= htmlWebpackPlugin.options.lang %>">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="author" content="Rory Claasen">
+
+	<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+	<div class="box">
+		<div class="row header">
+			<header>
+				<h1><i class="snes-jp-logo brand"></i><%= htmlWebpackPlugin.options.title %></h1>
+			</header>
+		</div>
+		<section id="gameContainer" class="row container">
+			<div id="<%= htmlWebpackPlugin.options.appMountId %>"></div>
+		</section>
+	</div>
+</body>
+</html>

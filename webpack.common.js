@@ -16,8 +16,8 @@ module.exports = (MODE = 'production') => {
 			new CleanWebpackPlugin(['dist']),
 			new HtmlWebpackPlugin({
 				title: 'Pong',
-				inject: false,
-				template: require('html-webpack-template'),
+				inject: true,
+				template: 'src/index.ejs', // require('html-webpack-template'),
 				devServer: MODE == 'development' ? 'http://localhost:4000' : undefined,
 				minify: true,
 				lang: 'en-GB',
