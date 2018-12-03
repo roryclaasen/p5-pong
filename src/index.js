@@ -2,6 +2,7 @@
 
 import P5 from 'p5';
 import Stats from 'stats-js';
+import Game from './game';
 
 function lenToNum(par1) {
 	return Number(par1.replace('px', ''));
@@ -24,14 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	 * @param {P5} sketch
 	 */
 	function renderer(sketch) {
+		let game;
+
 		sketch.setup = () => {
 			sketch.createCanvas(width, height);
+			game = new Game(sketch);
 		};
 
 		sketch.draw = () => {
-			stats.begin();
+			sketch.clear();
 			sketch.background(background);
-			// TODO Render
+			stats.begin();
+			game.draw(sketch);
 			stats.end();
 		};
 	}
